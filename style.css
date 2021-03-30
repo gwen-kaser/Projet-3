@@ -1,0 +1,345 @@
+/*header-logo*/
+body {
+    font-family: "open-sens";
+    text-align: center;
+}
+.logo img {
+    width: 16%;
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+h1 {
+    font-size: 1.6em;
+}
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+}
+h1, h2, h3 {
+    font-weight: 600;
+    color: #0e5467;
+}
+
+/*section-slider*/
+#slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    border: 6px double #0e5467;
+    width: 60%;
+    height: 420px;
+}
+#slider > img {
+    width: 70%;
+    height: 360px;
+    border: solid 1px #0e5467;
+    z-index: 1;
+}
+#slide-text {
+    position: absolute;
+    background: rgba(14,84,103,0.8);
+    color: white;
+    font-size: 1.6em;
+    left: 0;
+    top: 27px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 2;
+}
+#left, #right, #pause{
+    position: absolute;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    border: none;
+    font-size: 2.5em;
+    background: white;
+    color: #ff914d;
+}
+#right {
+    right: -25px;
+    bottom: 180px;
+}
+#left {
+    left: -25px;
+    bottom: 180px;
+}
+#pause {
+    bottom: -25px;
+}
+#slider:hover #left, #slider:hover #right, #slider:hover #pause {
+    opacity: 1;
+}
+
+/*section-map*/
+.booking-text {
+    margin-top: 50px;
+}
+.container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 92%;
+    height: 480px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+#map {
+    width: 65%;
+    border: 1px solid #0e5467;
+}
+/*informations station*/
+h3 {
+    text-align: center;
+}
+#block-infos-right {
+    width: 30%;
+    border: 6px double #0e5467;;
+    text-align: left;
+    font-size: 1.1em;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    color: #0e5467;
+}
+/*formulaire*/
+#booking-form {
+    margin-top: 20px;
+}
+input {
+    border: 1px solid #0e5467;
+    font-size: 0.9em;
+    color: #0e5467;
+}
+input#name{
+    margin-left: 18px;
+}
+
+button:focus {outline:0;}
+
+#booking {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+#booking, #clear, #confirm, #cancel {
+    cursor: pointer;
+    border: 6px double white;
+    background: #ff914d;
+    color: #0e5467;;
+    border-radius: 50%;
+    width: 100px;
+    padding: 7px;
+    font-weight: 600;
+}
+
+/*section-signature*/
+#signature {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 75px;
+    font-size: 1.1em;
+}
+#canvas {
+    border: 1px solid #0e5467;
+    margin-top: 15px;
+}
+
+/*footer-confirmation réservation*/ 
+#message-confirm-renting {
+    margin-top: 20px;
+    color: #0e5467;
+    font-size: 1.2em;
+}
+#confirm-renting {
+    font-size: 1.2em;
+    margin-bottom: 75px;
+    display: none;
+}
+#countdown-text {
+    color: #0e5467;
+    font-size: 1.1em;
+}
+
+/*responsive*/
+/*header-logo-tablette*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo img {
+        width: 20%;
+    }
+}
+/*header-logo-mobile*/
+@media (min-width: 375px) and (max-width: 768px) {
+    .logo img {
+        width: 25%;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .home-text {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+    .logo img {
+        width: 33%;
+        padding-bottom: 30px;
+    }
+    .home-text {
+        margin-bottom: -75px;
+    }
+}
+
+/*section-slider-tablette*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #slider {
+        width: 70%;
+    } 
+    #slider > img {
+        width: 80%;
+    }
+    #slider-text {
+        font-size: 1.8em;
+        left: 65px;
+        top: 40px;
+        padding: 10px;
+        width: 35%;
+    }
+}
+/*section-slider-mobile*/
+@media (min-width: 375px) and (max-width: 768px) {
+    #slider {
+        border: none;
+        width: 80%;
+    }
+    #slider > img {
+        border: 6px double #0e5467;
+        width: 100%;
+        height: 400px;
+    }
+    #slide-text {
+        font-size: 1.5em;
+        left: 0;
+    }
+    #left, #right, #pause {
+        display: none;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 500px) {
+    #slider {
+        border: none;
+        width: 95%;
+        margin-bottom: -60px;
+    }
+    #slider > img {
+        border: 6px double #0e5467;
+        width: 100%;
+        height: 280px;
+    }
+    #slide-text {
+        font-size: 1.4em;
+        width: 100%;
+        left: 0;
+        top: 60px;
+    }
+    #left, #right, #pause {
+        display: none;
+    }
+}
+
+/*section-map-tablette*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-row {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    #map {
+        height: 350px;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #block-infos-right {
+        width: 90%;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #booking {
+        margin-bottom: 20px;
+    }
+}
+/*section-map-mobile*/
+@media (min-width: 375px) and (max-width: 768px) {
+    .container-row {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    #map {
+        height: 350px;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #block-infos-right {
+        width: 90%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #booking {
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+    .container-row {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    #map {
+        height: 350px;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #block-infos-right {
+        width: 85%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*section-signature-tablette*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #canvas {
+        width: 95%;
+    }
+}
+/*section-signature-mobile*/
+@media (min-width: 375px) and (max-width: 768px) {
+    #canvas {
+        width: 90%;
+        height: 100px;
+    }
+}
